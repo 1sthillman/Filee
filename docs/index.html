@@ -1324,7 +1324,7 @@ else if(k=='put'){const v=calcEv(cx);if(v===null||!cl||!cl.isConnected)return to
 else cx+=k;calcShow()});
 document.addEventListener('focusin',e=>{const t=e.target;if(t.matches&&t.matches('input[type=number],input[inputmode=decimal],input[inputmode=numeric]')&&!CC.contains(t))cl=t});
 const _dr5=draw;draw=function(r){_dr5(r);cb.hidden=U.tab=='urun'};cb.hidden=U.tab=='urun';
-if(VCR)setTimeout(()=>toast('Sesle dinleme çöktüğü için kapatıldı. Komutu yazabilirsiniz','e'),900);
+// VCR kontrolü kaldırıldı (PWA'da gerek yok)
 
 if(healed)setTimeout(()=>toast('Kayıtlı veri onarıldı','e'),400);look();save();draw();
 (()=>{let t=0;addEventListener('devicemotion',e=>{const a=e.accelerationIncludingGravity;if(!a)return;const m=Math.hypot(a.x||0,a.y||0,a.z||0);if(m>32&&Date.now()-t>1500){t=Date.now();const b=document.getElementById('as');b&&b.click()}})})();
