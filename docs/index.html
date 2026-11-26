@@ -1255,5 +1255,5 @@ const _dr5=draw;draw=function(r){_dr5(r);cb.hidden=U.tab=='urun'};cb.hidden=U.ta
 if(VCR)setTimeout(()=>toast('Sesle dinleme çöktüğü için kapatıldı. Komutu yazabilirsiniz','e'),900);
 
 if(healed)setTimeout(()=>toast('Kayıtlı veri onarıldı','e'),400);look();save();draw();
-(()=>{let t=0;addEventListener('devicemotion',e=>{const a=e.accelerationIncludingGravity;if(!a)return;const m=Math.hypot(a.x||0,a.y||0,a.z||0);if(m>32&&Date.now()-t>1500){t=Date.now();const b=document.getElementById('as');b&&b.click()}})})();
+(()=>{let t=0;addEventListener('devicemotion',e=>{const a=e.accelerationIncludingGravity;if(!a)return;const m=Math.hypot(a.x||0,a.y||0,a.z||0);if(m>32&&Date.now()-t>1500){t=Date.now();if(window.AI&&window.AI.A){if(!window.AI.A.on){window.AI.start();setTimeout(()=>toast('Dinliyorum...'),300)}else{toast('Zaten dinliyorum')}}}})})();
 </script></body></html>
