@@ -1,0 +1,17 @@
+{
+  "appId": "com.manav.app",
+  "appName": "Manav Sayım",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "android": {
+    "allowMixedContent": true,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": false
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 2000,
+      "backgroundColor": "#EDF0EA"
+    }
+  }
+}
