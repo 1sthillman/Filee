@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Icon Generator</title>
+</head>
+<body>
+    <canvas id="canvas" width="512" height="512"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Background
+        ctx.fillStyle = '#1D6B44';
+        ctx.beginPath();
+        ctx.arc(256, 256, 240, 0, Math.PI * 2);
+        ctx.fill();
+        
+        // Tomato
+        ctx.fillStyle = '#E63946';
+        ctx.beginPath();
+        ctx.ellipse(230, 190, 50, 55, 0, 0, Math.PI * 2);
+        ctx.fill();
+        
+        // Tomato highlight
+        ctx.fillStyle = 'rgba(255, 107, 119, 0.5)';
+        ctx.beginPath();
+        ctx.ellipse(220, 180, 15, 20, -0.3, 0, Math.PI * 2);
+        ctx.fill();
+        
+        // Tomato stem
+        ctx.fillStyle = '#2D5016';
+        ctx.fillRect(252, 140, 8, 25);
+        
+        // Tomato leaves
+        ctx.fillStyle = '#4A7C2C';
+        ctx.beginPath();
+        ctx.ellipse(240, 150, 15, 8, -0.5, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.ellipse(270, 150, 15, 8, 0.5, 0, Math.PI * 2);
+        ctx.fill();
+        
+        // Pepper
+        ctx.fillStyle = '#6BBF59';
+        ctx.beginPath();
+        ctx.ellipse(340, 220, 30, 45, 0, 0, Math.PI * 2);
+        ctx.fill();
+        
+        // Pepper highlight
+        ctx.fillStyle = 'rgba(143, 212, 126, 0.4)';
+        ctx.beginPath();
+        ctx.ellipse(335, 210, 10, 15, 0, 0, Math.PI * 2);
+        ctx.fill();
+        
+        // Carrot
+        ctx.fillStyle = '#FF8C42';
+        ctx.beginPath();
+        ctx.moveTo(140, 220);
+        ctx.lineTo(160, 300);
+        ctx.quadraticCurveTo(165, 315, 180, 320);
+        ctx.quadraticCurveTo(195, 315, 200, 300);
+        ctx.lineTo(220, 220);
+        ctx.closePath();
+        ctx.fill();
+        
+        // Carrot lines
+        ctx.strokeStyle = '#E07A2F';
+        ctx.lineWidth = 4;
+        ctx.beginPath();
+        ctx.moveTo(155, 240);
+        ctx.lineTo(165, 300);
+        ctx.moveTo(180, 235);
+        ctx.lineTo(185, 305);
+        ctx.moveTo(205, 240);
+        ctx.lineTo(195, 300);
+        ctx.stroke();
+        
+        // Carrot greens
+        ctx.fillStyle = '#4A7C2C';
+        ctx.beginPath();
+        ctx.moveTo(155, 215);
+        ctx.lineTo(150, 190);
+        ctx.lineTo(165, 210);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.moveTo(180, 210);
+        ctx.lineTo(180, 185);
+        ctx.lineTo(190, 208);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.moveTo(205, 215);
+        ctx.lineTo(210, 190);
+        ctx.lineTo(195, 210);
+        ctx.fill();
+        
+        // Clipboard
+        ctx.fillStyle = '#F8F9FA';
+        ctx.fillRect(145, 310, 230, 160);
+        ctx.strokeStyle = '#DEE2E6';
+        ctx.lineWidth = 2;
+        ctx.strokeRect(145, 310, 230, 160);
+        
+        // Clipboard clip
+        ctx.fillStyle = '#6C757D';
+        ctx.fillRect(225, 300, 70, 25);
+        ctx.fillRect(230, 305, 60, 15);
+        
+        // Checklist items
+        ctx.strokeStyle = '#1D6B44';
+        ctx.lineWidth = 6;
+        ctx.lineCap = 'round';
+        
+        // Line 1
+        ctx.beginPath();
+        ctx.moveTo(180, 350);
+        ctx.lineTo(340, 350);
+        ctx.stroke();
+        
+        // Line 2
+        ctx.beginPath();
+        ctx.moveTo(180, 390);
+        ctx.lineTo(340, 390);
+        ctx.stroke();
+        
+        // Line 3
+        ctx.beginPath();
+        ctx.moveTo(180, 430);
+        ctx.lineTo(310, 430);
+        ctx.stroke();
+        
+        // Checkmarks
+        ctx.strokeStyle = '#1D6B44';
+        ctx.lineWidth = 8;
+        ctx.lineJoin = 'round';
+        
+        // Check 1
+        ctx.beginPath();
+        ctx.moveTo(165, 350);
+        ctx.lineTo(170, 357);
+        ctx.lineTo(180, 343);
+        ctx.stroke();
+        
+        // Check 2
+        ctx.beginPath();
+        ctx.moveTo(165, 390);
+        ctx.lineTo(170, 397);
+        ctx.lineTo(180, 383);
+        ctx.stroke();
+        
+        // Empty checkbox
+        ctx.strokeStyle = '#ADB5BD';
+        ctx.lineWidth = 5;
+        ctx.strokeRect(161, 422, 15, 15);
+        
+        // Download
+        setTimeout(() => {
+            const link = document.createElement('a');
+            link.download = 'manav_icon.png';
+            link.href = canvas.toDataURL();
+            link.click();
+        }, 100);
+    </script>
+</body>
+</html>
