@@ -991,10 +991,12 @@ if(gir&&!rest&&!ex){A.pend={k:'p',fn:p=>askTo(p,1)};return'Hangi ürün?'}
 if(pal&&rest&&hq&&!ex)return withP(rest,p=>putQ(p,1,q,neg?-1:1));
 if(rest&&!hq&&!A.G&&!neg&&!ex&&(pal||gir||words(N)==t)&&match(rest).length)return withP(rest,p=>askTo(p,pal||gir||U.tab=='sevk'?1:U.tab=='sayim'?0:null))}
 function parse(t,raw){const tk=t.split(' '),has=r=>r.test(t),N=nums(tk),nObj=N.find(x=>typeof x=='object'),nv=nObj&&nObj.n,rest=words(N);let m;
+if(has(/sayimdan|sayimdan.*cikar|sayimdan.*sil|sayimi sil|sayimi cikar/))return withP(rest,p=>{const c=cnt(p.id);if(!c||(!c.crates&&!c.loose))return low(p.name)+' zaten sayılmamış.';S.counts=S.counts.filter(x=>x.k!=U.date+'|'+p.id);save();draw();return low(p.name)+' sayımdan çıkarıldı.'});
+if(has(/sevkiyattan.*cikar|sevkiyattan.*sil|paletten.*cikar|paletten.*sil/))return withP(rest,p=>{const s=curShip();if(!s||s.closed)return'Açık sevkiyat yok.';const pl=curPal(s);if(!pl.lines[p.id])return low(p.name)+' zaten sevkiyatta yok.';delete pl.lines[p.id];save();draw();return low(p.name)+' sevkiyattan çıkarıldı.'});
 if(has(/(asistan\w*|dinleme\w*) (kapat|durdur|birak|bitir)|gule gule|hoscakal|uyku modu/)){A.off=1;return'Tamam, dinlemeyi bıraktım. Başlatmak için mikrofon düğmesine dokun.'}
 {const x=more5(t,raw,N,nv,rest,has);if(x!==undefined)return x}{const x=more4(t,raw,N,nv,rest,has);if(x!==undefined)return x}{const x=more3(t,raw,N,nv,rest,has);if(x!==undefined)return x}{const x=more2(t,raw,N,nv,rest,has);if(x!==undefined)return x}{const x=more(t,raw,N,nv,rest,has);if(x!==undefined)return x}{const x=extra(t,raw,N,nv,rest,has);if(x!==undefined)return x}
 if(has(/neler yapabil|yardim|ne diyebilir|komutlar/))return'İnternet gerekmeden çalışırım. Sayım girebilir, “sayıma başla” ile ürünleri sırayla sorabilir, palete ürün ekleyip çıkarabilir, yeni palet ve sevkiyat açabilir, sayfalar arasında gezinebilir, ürün arayabilir, toplamları ve kalan ürünleri okuyabilir, tema ve yazı boyutunu değiştirebilir ve son işlemi geri alabilirim. Ayrıca not alır, hatırlatıcı kurar, sipariş listesi tutar, günlük özet verir, saklama bilgisi söyler, dünle karşılaştırır ve veriyi kontrol ederim. Sayım, sevkiyat ve raporları Excel, PDF ya da CSV olarak hazırlar, WhatsApp için paylaşıma sunar, yeni ürün ekler. Mal girişi, satış ve fire kaydı tutar, fiyatla stok değeri hesaplar, sevkiyatın sayımla uyumunu denetler, kategori raporu verir. Eksik stokta uyarır ve sipariş önerir, gün sonu kontrolü yapar, yanlış girileni düzeltir, takma ad öğrenir. Alt başlık için sayım komutları, sevkiyat komutları, rapor komutları, fiyat komutları ya da hareket komutları de.';
-if(has(/geri al/)){undo();return'Son işlem geri alındı.'}
+if(has(/geri al|iptal et|son islem|olmadi|yanlisti|hatali|yanlis oldu|sil bunu/)){undo();return'Geri alındı.'}
 if(has(/(daha )?yavas (konus|oku)|yavaslat/)){U.vr=Math.max(.6,+(U.vr-.15).toFixed(2));su();return'Daha yavaş konuşuyorum.'}
 if(has(/(daha )?hizli (konus|oku)|hizlan/)){U.vr=Math.min(1.6,+(+U.vr+.15).toFixed(2));su();return'Daha hızlı konuşuyorum.'}
 if(has(/sesi degistir|baska ses|sonraki ses/)){const i=VL.indexOf(cur());if(VL.length){U.vo=VL[(i+1)%VL.length].voiceURI;su()}return'Sesi değiştirdim. Böyle iyi mi?'}
@@ -1037,7 +1039,7 @@ if(rest&&has(/\b(ac|goster|detay\w*|bak)\b/))return withP(rest,p=>{openProduct(p
 if(rest&&match(rest).length)return withP(rest,p=>cs(p)+' Ne yapayım? Örneğin: iki koli ekle.')}
 /* ---- ana akış ---- */
 function pending(t){const P=A.pend;if(!P)return;
-if(/^(vazgec|iptal|bos ver|hayir|yok|birak)\b/.test(t)){A.pend=null;return'Tamam, vazgeçtim.'}
+if(/^(vazgec|iptal|bos ver|hayir|yok|birak|olmadi|yanlis|yanlista|hata|hatali|silsene)\b/.test(t)){A.pend=null;return'Tamam.'}
 if(P.k=='n'){A.pend=null;return P.fn(t,qty(nums(t.split(' '))))}
 if(P.k=='y'){A.pend=null;if(/^(evet|tamam|olur|onayla|dogru|aynen|ok)\b/.test(t))return P.fn();return}
 const N=nums(t.split(' '));
