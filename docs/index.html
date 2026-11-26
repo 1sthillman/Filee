@@ -1,11 +1,6 @@
-﻿<!doctype html><html lang="tr"><head><meta charset="utf-8">
+<!doctype html><html lang="tr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#1D6B44">
-<meta name="description" content="Manav ve market sayım, sevkiyat takip uygulaması">
-<title>Manav Sayım</title>
-<link rel="manifest" href="./manifest.webmanifest">
-<link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
-<link rel="apple-touch-icon" href="./icons/icon-192.png">
+<title>Manav</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
@@ -35,7 +30,7 @@ main{max-width:960px;margin:auto;padding:4px 16px 120px}
 .tl.q{background:#fff}.tl.q>div{width:74%}.tl.q>div svg{width:100%}
 .ey{position:absolute;top:6px;right:6px;width:34px;height:34px;border-radius:10px;border:0;background:color-mix(in srgb,var(--sf) 88%,transparent);display:grid;place-items:center}
 .tl.q+.ey{width:24px;height:24px;top:3px;right:3px;background:transparent;color:#000;opacity:.1}.tl.q+.ey:focus-visible{opacity:.7}
-.cb{padding:9px 11px 11px}.nm{font-weight:600;font-size:13.5px;line-height:1.25;height:34px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical}
+.cb{padding:9px 11px 11px}.nm{font-weight:600;font-size:13.5px;line-height:1.25;height:34px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 .mt{display:flex;justify-content:space-between;color:var(--mu);font-size:12px;margin-top:6px;font-variant-numeric:tabular-nums}
 .hero{background:var(--g);color:var(--on);border-radius:18px;padding:16px;margin-bottom:12px}
 .hero .in{background:color-mix(in srgb,var(--on) 14%,transparent);border-color:transparent;color:var(--on);height:40px}.hero select.in{appearance:none}.hero option{color:#000}
@@ -44,7 +39,7 @@ main{max-width:960px;margin:auto;padding:4px 16px 120px}
 .hr{display:flex;gap:8px;align-items:center;justify-content:space-between;margin-bottom:10px}
 .rw{display:flex;gap:12px;align-items:center;padding:10px 12px;background:var(--sf);border:1px solid var(--ln);border-radius:14px;margin-bottom:8px;cursor:pointer}
 .th{width:48px;height:48px;border-radius:10px;display:grid;place-items:center;flex:none;background:color-mix(in srgb,var(--c,#888) 16%,var(--sf))}.th svg{width:34px;height:34px}
-.rw .tx{flex:1;min-width:0}.rw .nm{height:auto;-webkit-line-clamp:1;line-clamp:1}.mu{color:var(--mu);font-size:13px}.rr{text-align:right;font-variant-numeric:tabular-nums}.rr b{font-family:"Bricolage Grotesque";font-size:18px}
+.rw .tx{flex:1;min-width:0}.rw .nm{height:auto;-webkit-line-clamp:1}.mu{color:var(--mu);font-size:13px}.rr{text-align:right;font-variant-numeric:tabular-nums}.rr b{font-family:"Bricolage Grotesque";font-size:18px}
 .ok{color:var(--g)}.st{display:flex;align-items:center;gap:4px}.st button{width:38px;height:38px;border-radius:11px;border:1px solid var(--ln);background:var(--sf);display:grid;place-items:center}.st b{min-width:34px;text-align:center;font:800 20px "Bricolage Grotesque";font-variant-numeric:tabular-nums}
 .bt{height:44px;padding:0 16px;border-radius:12px;border:0;background:var(--g);color:var(--on);font-weight:600}.bt.s{background:var(--gl);color:var(--g)}.bt.o{background:var(--o);color:#fff}
 .acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.em{padding:36px 12px;text-align:center;color:var(--mu)}
@@ -76,7 +71,7 @@ main,.pn{zoom:var(--z,1)}.cd,.rw{transition:transform .12s}.cd:active,.rw:active
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 
 .pk{position:sticky;top:-16px;z-index:3;background:var(--sf);padding:6px 0 4px;margin-top:-6px}.pk .cps{margin:8px 0 2px}
-.pr{display:flex;gap:10px;align-items:center;padding:8px 10px;border:1px solid var(--ln);border-radius:14px;margin-bottom:6px;background:var(--sf);cursor:pointer}.pr .tx{flex:1;min-width:0}.pr .nm{height:auto;-webkit-line-clamp:1;line-clamp:1}.pr.in1{border-color:var(--g);background:var(--gl)}.pr .st b{font-size:17px}
+.pr{display:flex;gap:10px;align-items:center;padding:8px 10px;border:1px solid var(--ln);border-radius:14px;margin-bottom:6px;background:var(--sf);cursor:pointer}.pr .tx{flex:1;min-width:0}.pr .nm{height:auto;-webkit-line-clamp:1}.pr.in1{border-color:var(--g);background:var(--gl)}.pr .st b{font-size:17px}
 .tm{margin:0 0 10px}.tm textarea{width:100%;height:46px;padding:12px;resize:none;font-size:15px;line-height:20px;border:1px dashed var(--g);border-radius:12px;background:var(--sf);color:var(--ink)}
 .cc{position:fixed;right:12px;bottom:calc(92px + env(safe-area-inset-bottom,0px));z-index:45;width:236px;background:var(--sf);border:1px solid var(--ln);border-radius:18px;box-shadow:0 12px 34px rgba(0,0,0,.28);padding:10px}.cc[hidden]{display:none}
 .cc .dp{background:var(--bg);border-radius:12px;padding:8px 10px;text-align:right;min-height:58px}.cc .dp small{display:block;color:var(--mu);min-height:16px;font-size:12px}.cc .dp b{font:800 26px "Bricolage Grotesque",system-ui;word-break:break-all}
@@ -99,15 +94,8 @@ const nz=s=>String(s).toLocaleLowerCase('tr').normalize('NFD').replace(/[\u0300-
 const lev=(a,b)=>{if(a==b)return 0;const d=[...Array(b.length+1).keys()];for(let i=1;i<=a.length;i++){let p=d[0];d[0]=i;for(let j=1;j<=b.length;j++){const t=d[j];d[j]=Math.min(d[j]+1,d[j-1]+1,p+(a[i-1]==b[j-1]?0:1));p=t}}return d[b.length]};
 const ph=x=>x.replace(/w/g,'v').replace(/(.)\1+/g,'$1').replace(/ph/g,'f');
 const mt=(h,q)=>{if(!q)return true;h=ph(nz(h));q=ph(q);const hs=h.replace(/ /g,''),ws=h.split(' ');if(hs.includes(q.replace(/ /g,'')))return true;return q.split(' ').filter(Boolean).every(t=>h.includes(t)||hs.includes(t)||(t.length>3&&ws.some(w=>lev(w.slice(0,t.length),t)<=(t.length>5?2:1))))};
-const BUILD={v:'1.0.2-pwa',t:Date.now()};
-const NATIVE=false;
-// Eski ses kapama bayraklarını temizle
-try{localStorage.removeItem('manav.vc');localStorage.removeItem('manav.vf')}catch(e){}
-const VOK=()=>true; // PWA: ses destekleniyorsa her zaman açık
-const DIAG={errors:[],cap:15};
-function logErr(e,ctx){const msg=e&&e.message||String(e);const st=e&&e.stack||'';DIAG.errors.unshift({t:Date.now(),msg,st,ctx});if(DIAG.errors.length>DIAG.cap)DIAG.errors.pop();console.error('[DIAG]',ctx||'error',e)}
-window.addEventListener('error',e=>{logErr(e.error||e.message,'window.error')});
-window.addEventListener('unhandledrejection',e=>{logErr(e.reason,'unhandledrejection')});
+const VF='manav.vf',VC='manav.vc';let VCR=false;try{if(localStorage.getItem(VF)){localStorage.setItem(VC,'1');localStorage.removeItem(VF)}VCR=!!localStorage.getItem(VC)}catch(e){}
+const VOK=()=>!VCR&&!(/;\s*wv\)/.test(navigator.userAgent)&&!U.vtry);
 const ic={eye:'<path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',eyeoff:'<path d="M3 3l18 18M10.6 5.1A9.7 9.7 0 0 1 12 5c6.4 0 10 7 10 7a17 17 0 0 1-3.2 4M6.5 6.6C3.7 8.4 2 12 2 12s3.6 7 10 7c1.6 0 3-.4 4.3-1M9.9 9.9a3 3 0 0 0 4.2 4.2"/>',scan:'<path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3M4 12h16"/>',box:'<path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5zM3 7.5L12 12l9-4.5M12 12v9"/>',count:'<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v3H9zM9 14l2 2 4-4"/>',truck:'<path d="M2 6h11v10H2zM13 9h4l4 4v3h-8z"/><circle cx="6.5" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/>',db:'<ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/>',search:'<circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/>',plus:'<path d="M12 5v14M5 12h14"/>',minus:'<path d="M5 12h14"/>',x:'<path d="M6 6l12 12M18 6L6 18"/>',mic:'<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/>',star:'<path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.9l-5.2 2.8 1-5.9L3.5 9.7l5.9-.8z"/>',undo:'<path d="M9 14L4 9l5-5M4 9h10a6 6 0 0 1 0 12h-3"/>'};
 const I=(n,s=22)=>`<svg viewBox="0 0 24 24" width="${s}" height="${s}" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ic[n]}</svg>`;
 /* ---- ürün görselleri: kategoriye göre üretilen SVG ---- */
@@ -388,8 +376,8 @@ function toast(m,k){const t=$('#t');t.textContent=m;t.className=k||'';t.hidden=f
 function look(){if(!Array.isArray(U.fav))U.fav=[];document.documentElement.dataset.theme=U.th=='auto'?'':U.th;document.documentElement.style.setProperty('--z',+U.z||1)}
 function fb(ok){if(U.hap&&navigator.vibrate)navigator.vibrate(ok?25:[40,40,40]);if(U.snd)try{const c=fb.c=fb.c||new AudioContext,o=c.createOscillator(),g=c.createGain();o.frequency.value=ok?1040:300;g.gain.value=.08;o.connect(g);g.connect(c.destination);o.start();o.stop(c.currentTime+.09)}catch(e){}}
 function undo(){try{const t=rd(KB);if(!t)throw 0;S=norm(JSON.parse(t));wr(K,t);draw();if(CP)openProduct(CP);toast('Son işlem geri alındı')}catch(e){toast('Geri alınacak işlem yok','e')}}
-const isFav=id=>U.fav.includes(id),MIC=()=>`<button class="ib mic" data-a="mic" aria-label="Sesle ara" style="border:0;background:none;width:36px;height:36px">${I('mic',20)}</button>`;
-async function dictate(){if(!SR||!VOK())return toast('Ses tanıma desteklenmiyor','e');if(!navigator.onLine){const hasLocal=A.loc;if(!hasLocal)return toast('Çevrimdışı ses tanıma bu cihazda yok. İnternet bağlantısı gerekli veya yazarak girin.','e')}const r=new SR();r.lang='tr-TR';if(A.loc)r.processLocally=true;r.maxAlternatives=1;r.interimResults=false;r.onresult=e=>{const q=$('#pq')||$('#q');if(!q)return;const txt=e.results[0][0].transcript.replace(/[.,]$/,'');q.value=txt;q.dispatchEvent(new Event('input',{bubbles:true}));toast('Ses algılandı')};r.onerror=e=>{if(e.error=='not-allowed')toast('Mikrofon izni yok','e');else if(e.error=='no-speech')toast('Ses algılanamadı, tekrar deneyin','e');else if(e.error=='network')toast('İnternet bağlantısı gerekli','e');else toast('Ses tanıma hatası','e')};toast('Dinleniyor, ürün adını söyleyin');try{r.start()}catch(e){toast('Ses tanıma başlatılamadı','e')}}
+const isFav=id=>U.fav.includes(id),MIC=()=>(VOK()&&(window.SpeechRecognition||window.webkitSpeechRecognition))?`<button class="ib mic" data-a="mic" aria-label="Sesle ara" style="border:0;background:none;width:36px;height:36px">${I('mic',20)}</button>`:'';
+function dictate(){const R=window.SpeechRecognition||window.webkitSpeechRecognition;if(!R||!VOK())return;const r=new R;r.lang='tr-TR';r.onresult=e=>{const q=$('#pq')||$('#q');if(!q)return;q.value=e.results[0][0].transcript.replace(/[.,]$/,'');q.dispatchEvent(new Event('input',{bubbles:true}))};r.onerror=()=>toast('Ses algılanamadı','e');toast('Dinleniyor, ürün adını söyleyin');try{r.start()}catch(e){}}
 function shareCount(){const A=all(),l=A.filter(p=>cnt(p.id)).map(p=>{const c=cnt(p.id);return `${p.name}: ${c.crates} koli + ${fmt(c.loose)} = ${fmt(tot(c,p))} ${un(p)}`});if(!l.length)return toast('Bu tarihte sayım yok','e');const t=`Sayım ${U.date}\n`+l.join('\n');navigator.share?navigator.share({text:t}).catch(()=>{}):copy(t)}
 function copyShip(){const s=curShip(),o=S.ships.filter(x=>x.id!=s.id).sort((a,b)=>(b.t||0)-(a.t||0))[0];if(!o||s.closed)return toast('Kopyalanacak sevkiyat yok','e');if(pals(s).some(p=>Object.keys(p.lines).length))return toast('Önce mevcut paletleri boşaltın','e');const old=S.pallets.filter(p=>p.shipId==o.id);if(!old.length)return toast('Önceki sevkiyat boş','e');S.pallets=S.pallets.filter(p=>p.shipId!=s.id).concat(old.map(p=>({...p,id:'p'+uid(),shipId:s.id,lines:{...p.lines},ex:{...(p.ex||{})}})));U.pal='';save();su();draw();toast('Önceki sevkiyat kopyalandı')}
 /* ---- sevkiyat ---- */
@@ -424,33 +412,7 @@ open(`<div class="hd"><div class="th" style="--c:${a.c}">${a.s}</div><div><h2>${
 <div class="bx"><div class="l"><h3>Sayım</h3><input class="in" type="date" id="dt" value="${U.date}" style="width:auto;height:38px"></div><div class="l"><span>Koli</span><div class="st"><button data-a="cd" aria-label="Koli azalt">${I('minus',18)}</button><input class="qi" id="cr" type="number" min="0" inputmode="numeric" value="${c?c.crates:0}" aria-label="Koli adedi"><button data-a="ci" aria-label="Koli artır">${I('plus',18)}</button></div></div><div class="l"><span>Dağınık (${u})</span><input class="in" id="ls" type="number" step="any" min="0" inputmode="decimal" value="${c?c.loose:0}" style="width:110px;text-align:right"></div><div class="l"><span>Dağınık ekle (+)</span><input class="in" id="la" type="number" step="any" min="0" inputmode="decimal" placeholder="+ ${u}" style="width:110px;text-align:right"></div>${c&&c.lh&&c.lh.length>1?`<div class="l"><span class="mu">${c.lh.map(fmt).join(' + ')} = ${fmt(c.loose)}</span><button class="bt s" data-a="lu" style="height:34px">Sonu geri al</button></div>`:''}<div class="l"><span class="mu">Toplam</span><b class="num ok" style="font-size:22px">${fmt(tot(c,p))} ${u}</b></div><div class="acts" style="margin-top:6px"><button class="bt" data-a="nxt">Sonraki sayılmayan</button><button class="bt s" data-a="zero">Sıfır say</button>${c?'<button class="bt s" data-a="clr">Sayımı sil</button>':''}</div></div>
 <div class="bx"><div class="l"><h3>Sevkiyat</h3>${pl&&!s.closed?`<span class="mu">${esc(pl.name)}</span>`:''}</div>${pl&&!s.closed?`<div class="l"><span>Koli</span><div class="st"><button data-a="pd" aria-label="Azalt">${I('minus',18)}</button><input class="qi" id="pr" type="number" min="0" inputmode="numeric" value="${pl.lines[id]||0}" aria-label="Palet koli adedi"><button data-a="pi" aria-label="Artır">${I('plus',18)}</button></div></div>`:'<div class="mu">Açık sevkiyat yok. Sevkiyat sekmesinden yeni sevkiyat başlatın.</div>'}</div>`)}
 function plist(q){q=nz(q||'');const s=curShip(),pl=curPal(s);return all().filter(p=>!q||mt(p.name+' '+p.plu,q)).slice(0,60).map(p=>`<div class="rw" tabindex="0" role="button" data-a="add" data-id="${esc(p.id)}">${thumb(p)}<div class="tx"><div class="nm">${esc(p.name)}</div><div class="mu">PLU ${esc(p.plu)}</div></div><b class="num ok">${pl.lines[p.id]||''}</b></div>`).join('')||'<div class="em">Ürün bulunamadı.</div>'}
-function menu(){
-let diagHTML='';
-try{
-const isNative=NATIVE;
-const buildInfo=`Sürüm ${BUILD.v} · Build ${new Date(BUILD.t).toLocaleString('tr-TR')}`;
-let platformInfo=isNative?'✓ Native Android APK':'⚠️ Web Tarayıcı';
-let pluginsList='Yükleniyor...';
-let permsInfo='Yükleniyor...';
-let voicesInfo='Yükleniyor...';
-let sttInfo='Yükleniyor...';
-diagHTML=`<div class="bx"><h3>Tanılama</h3>
-<div class="mu"><b>Platform:</b> ${platformInfo}</div>
-<div class="mu"><b>Build:</b> ${buildInfo}</div>
-<div class="mu"><b>Eklentiler:</b> ${pluginsList}</div>
-<div class="mu"><b>İzinler:</b> ${permsInfo}</div>
-<div class="mu"><b>Sesli Okuma:</b> ${voicesInfo}</div>
-<div class="mu"><b>Ses Tanıma:</b> ${sttInfo}</div>
-<div class="mu"><b>Son Hatalar:</b> ${DIAG.errors.length} kayıt (son ${DIAG.cap})</div>
-<div class="acts" style="margin-top:8px"><button class="bt s" data-a="testTTS">🔊 Sesli Oku</button><button class="bt s" data-a="testSTT">🎤 Dikte</button><button class="bt s" data-a="testFile">📁 Dosya Kaydet</button></div>
-${DIAG.errors.length?`<details style="margin-top:8px"><summary class="mu">Hata logları (${DIAG.errors.length})</summary><div style="max-height:200px;overflow:auto;font-size:11px;font-family:monospace;background:var(--bg);padding:8px;border-radius:8px;margin-top:4px">${DIAG.errors.map(e=>`<div style="border-bottom:1px solid var(--ln);padding:4px 0"><b>${new Date(e.t).toLocaleTimeString()}</b> ${esc(e.ctx||'')}<br>${esc(e.msg)}</div>`).join('')}</div></details>`:''}
-</div>`;}catch(e){logErr(e,'menu');diagHTML='<div class="bx"><h3>Tanılama</h3><div class="mu" style="color:var(--r)">Tanılama yüklenemedi: '+esc(e.message)+'</div></div>';}
-open(`<div class="hd"><div><h2>Ayarlar ve Tanılama</h2><div class="mu">Sürüm ${BUILD.v} · ${NATIVE?'Native':'Web'}</div></div><button class="ib" data-a="x" aria-label="Kapat">${I('x')}</button></div>
-${diagHTML}
-<div class="bx" style="margin:12px 0"><h3>Görünüm ve erişilebilirlik</h3><div class="cps" role="group" aria-label="Tema">${chips('th',[['auto','Otomatik'],['light','Açık'],['dark','Koyu']])}</div><div class="cps" role="group" aria-label="Yazı boyutu">${chips('z',[[1,'Normal'],[1.15,'Büyük'],[1.3,'Çok büyük']])}</div><div class="cps"><button class="cp${U.snd?' on':''}" data-a="snd" aria-pressed="${!!U.snd}">Okuma sesi</button><button class="cp${U.hap?' on':''}" data-a="hap" aria-pressed="${!!U.hap}">Titreşim</button></div></div>
-<div class="bx"><h3>Veri ve yedek</h3><div class="mu">Veriler bu cihazın tarayıcısında saklanır; her kayıtta önceki sürüm yedeklenir.</div>
-<div class="acts" style="margin-top:8px"><button class="bt" data-a="cp">Yedeği kopyala</button><label class="bt s" style="display:grid;place-items:center">Dosyadan yükle<input type="file" id="fi" accept=".json,application/json" hidden></label></div></div>
-<div class="bx"><h3>Yedeği yapıştırarak yükle</h3><textarea class="in" id="ta" placeholder="Yedek JSON içeriğini buraya yapıştırın"></textarea><div class="acts"><button class="bt s" data-a="imp">Yükle</button></div></div>`)}
+function menu(){open(`<div class="hd"><div><h2>Veri ve yedek</h2><div class="mu">Veriler bu cihazın tarayıcısında saklanır; her kayıtta önceki sürüm yedeklenir.</div></div><button class="ib" data-a="x" aria-label="Kapat">${I('x')}</button></div><div class="bx" style="margin:0 0 12px"><h3>Görünüm ve erişilebilirlik</h3><div class="cps" role="group" aria-label="Tema">${chips('th',[['auto','Otomatik'],['light','Açık'],['dark','Koyu']])}</div><div class="cps" role="group" aria-label="Yazı boyutu">${chips('z',[[1,'Normal'],[1.15,'Büyük'],[1.3,'Çok büyük']])}</div><div class="cps"><button class="cp${U.snd?' on':''}" data-a="snd" aria-pressed="${!!U.snd}">Okuma sesi</button><button class="cp${U.hap?' on':''}" data-a="hap" aria-pressed="${!!U.hap}">Titreşim</button></div></div><div class="acts"><button class="bt" data-a="cp">Yedeği kopyala</button><label class="bt s" style="display:grid;place-items:center">Dosyadan yükle<input type="file" id="fi" accept=".json,application/json" hidden></label></div><div class="bx"><h3>Yedeği yapıştırarak yükle</h3><textarea class="in" id="ta" placeholder="Yedek JSON içeriğini buraya yapıştırın"></textarea><div class="acts"><button class="bt s" data-a="imp">Yükle</button></div></div>`)}
 async function copy(t){try{await navigator.clipboard.writeText(t);toast('Panoya kopyalandı')}catch(e){open(`<div class="hd"><h2 style="flex:1">Kopyalayın</h2><button class="ib" data-a="x" aria-label="Kapat">${I('x')}</button></div><textarea class="in" id="ta" readonly>${esc(t)}</textarea>`);$('#ta').select()}}
 function imp(t){try{const d=JSON.parse(t);if(!d||!Array.isArray(d.products)||!d.products.length)throw 0;S=norm(d);save();shut();draw();toast('Yedek yüklendi')}catch(e){toast('Dosya okunamadı. Geçerli bir manav yedek dosyası seçin.','e')}}
 function shareText(){const s=curShip(),A=all();return `Sevkiyat ${s.date}${s.party?' - '+s.party:''}\n`+pals(s).map(p=>`\n${p.name}\n`+(Object.entries(p.lines).map(([id,q])=>{const x=A.find(a=>a.id==id);return x?`${x.name}: ${q} koli (${fmt(q*x.kg)} ${un(x)})`:''}).concat(Object.entries(p.ex||{}).map(([id,m])=>{const x=A.find(a=>a.id==id);return x?`${x.name}: ${fmt(m)} ${un(x)}`:''})).filter(Boolean).join('\n')||'(boş)')).join('\n')}
@@ -472,9 +434,6 @@ case'zero':setCnt(CP,{crates:0,loose:0,z:1});openProduct(CP);draw();break;
 case'clr':S.counts=S.counts.filter(x=>x.k!=U.date+'|'+CP);save();openProduct(CP);draw();break;
 case'pd':case'pi':if(addTo(CP,a=='pi'?1:-1)){openProduct(CP);draw()}break;
 case'scan':openScan();break;case'sx':closeScan();break;case'more':menu();break;
-case'testTTS':try{if(NATIVE&&window.Capacitor&&window.Capacitor.Plugins&&window.Capacitor.Plugins.TextToSpeech){window.Capacitor.Plugins.TextToSpeech.speak({text:'Merhaba, bu bir test.',lang:'tr-TR',rate:1,pitch:1,volume:1}).then(()=>toast('TTS çalıştı')).catch(e=>{logErr(e,'testTTS');toast('TTS hatası: '+e.message,'e');});}else if(window.speechSynthesis){const u=new SpeechSynthesisUtterance('Merhaba, bu bir test.');u.lang='tr-TR';window.speechSynthesis.speak(u);toast('WebView TTS çalıştı');}else toast('TTS yok','e');}catch(e){logErr(e,'testTTS');toast('Hata: '+e.message,'e');}break;
-case'testSTT':try{dictate();}catch(e){logErr(e,'testSTT');toast('STT hatası: '+e.message,'e');}break;
-case'testFile':try{if(NATIVE&&window.Capacitor&&window.Capacitor.Plugins&&window.Capacitor.Plugins.Filesystem&&window.Capacitor.Plugins.Share){const FS=window.Capacitor.Plugins.Filesystem,SH=window.Capacitor.Plugins.Share;const txt='Test: '+new Date().toISOString();const b64=btoa(unescape(encodeURIComponent(txt)));FS.writeFile({path:'test.txt',data:b64,directory:'Cache',encoding:'base64'}).then(r=>SH.share({title:'Test',text:'Test dosyası',url:r.uri,dialogTitle:'Test'})).then(()=>toast('Paylaşım açıldı')).catch(e=>{logErr(e,'testFile');toast('Hata: '+e.message,'e');});}else toast('FS/Share yok','e');}catch(e){logErr(e,'testFile');toast('Hata: '+e.message,'e');}break;
 case'cp':copy(JSON.stringify(S));break;case'imp':imp($('#ta').value);break;
 case'ns':newShip();draw();break;case'np':{const s=curShip();if(!s.closed){addPal(s);save();su();draw()}break}
 case'pal':U.pal=v;su();draw();break;case'ld':case'li':addTo(id,a=='li'?1:-1);draw();break;
@@ -566,8 +525,11 @@ return exTbls(k).map(t=>`*${t.title}* (${t.sub})\n`+t.rows.map(r=>'• '+r.v.fil
 const XM={xlsx:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',pdf:'application/pdf',csv:'text/csv'},KN=[['cnt','Sayım'],['ship','Sevkiyat'],['mv','Hareketler'],['ord','Sipariş'],['cat','Ürün listesi'],['all','Tüm rapor']],KF={cnt:'Sayim',ship:'Sevkiyat',mv:'Hareketler',ord:'Siparis',cat:'Urunler',all:'Rapor'};
 async function exBuild(k,f){const ts=exTbls(k),s=curShip(),party=k=='ship'&&s&&s.party?'_'+nz(s.party).replace(/[^a-z0-9]+/g,'_').slice(0,20):'',name=`Manav_${KF[k]}_${U.date}${party}.${f}`;const blob=f=='xlsx'?xlsx(ts):f=='pdf'?await pdfB(ts,k):csvB(ts);return{blob,name,mime:XM[f],k,f}}
 /* ---- teslim: paylaş / kaydet ---- */
-async function exSave(){const c=X.cur;if(!c)return;try{if(window.Capacitor&&window.Capacitor.Plugins){const{Filesystem,Share}=window.Capacitor.Plugins;try{const reader=new FileReader();const base64=await new Promise((ok,fail)=>{reader.onloadend=()=>ok(reader.result.split(',')[1]);reader.onerror=fail;reader.readAsDataURL(c.blob)});const result=await Filesystem.writeFile({path:c.name,data:base64,directory:'DOCUMENTS'});toast('Dosya kaydedildi: Documents/'+c.name);const uri=result.uri;setTimeout(async()=>{try{await Share.share({title:c.name,text:'Manav raporu',url:uri,dialogTitle:c.name})}catch(e){}},500);return}catch(e){console.error('Filesystem hatası:',e);if(e.message&&e.message.includes('permission')){toast('Depolama izni gerekli','e');return}}}const a=document.createElement('a');a.href=URL.createObjectURL(c.blob);a.download=c.name;document.body.appendChild(a);a.click();setTimeout(()=>{a.remove();URL.revokeObjectURL(a.href)},5000);toast('İndirme başlatıldı')}catch(e){console.error('exSave hatası:',e);toast('Kaydedilemedi: '+(e&&e.message||'bilinmeyen hata'),'e')}}
-async function exShare(fromSave){const c=X.cur;if(!c)return;try{if(window.Capacitor&&window.Capacitor.Plugins){const{Filesystem,Share}=window.Capacitor.Plugins;try{const reader=new FileReader();const base64=await new Promise((ok,fail)=>{reader.onloadend=()=>ok(reader.result.split(',')[1]);reader.onerror=fail;reader.readAsDataURL(c.blob)});const fileName=c.name.replace(/[^a-zA-Z0-9._-]/g,'_');const result=await Filesystem.writeFile({path:fileName,data:base64,directory:'CACHE'});await Share.share({title:c.name,text:'Manav raporu: '+c.name,url:result.uri,dialogTitle:'Raporu paylaş'});return}catch(e){console.error('Share hatası:',e);toast('Paylaşım hatası: '+(e.message||'bilinmeyen'),'e');return}}const f=new File([c.blob],c.name,{type:c.mime});if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f],title:c.name,text:c.name});return}}catch(e){if(e&&e.name=='AbortError')return;console.error('exShare hatası:',e)}if(fromSave){toast('Bu ortamda paylaşım kullanılamıyor','e');return}toast('Paylaşım desteklenmiyor, kaydetme deneniyor');exSave()}
+async function exSave(){const c=X.cur;if(!c)return;try{const d=window.claude&&claude.use?await claude.use('downloads'):null;if(d){try{await d.save({filename:c.name,data:c.blob});toast('Kaydetme isteği gönderildi');return}catch(e){if(e&&e.code=='declined')return;if(e&&e.code!='host_unavailable'&&e.code!='unavailable'&&e.code!='not_granted')throw e}}
+if(navigator.canShare&&navigator.canShare({files:[new File([c.blob],c.name,{type:c.mime})]})&&window.claude){return exShare(1)}
+const a=document.createElement('a');a.href=URL.createObjectURL(c.blob);a.download=c.name;document.body.appendChild(a);a.click();setTimeout(()=>{a.remove();URL.revokeObjectURL(a.href)},5000);toast('İndirme başlatıldı')}catch(e){toast('Kaydedilemedi: '+(e&&e.message||'bilinmeyen hata'),'e')}}
+async function exShare(fromSave){const c=X.cur;if(!c)return;const f=new File([c.blob],c.name,{type:c.mime});try{if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f],title:c.name,text:c.name});return}}catch(e){if(e&&e.name=='AbortError')return}
+if(fromSave){toast('Bu ortamda paylaşım ve kaydetme kullanılamıyor','e');return}toast('Paylaşım bu ortamda desteklenmiyor, kaydetme deneniyor');exSave()}
 const sz=b=>b>1048576?(b/1048576).toFixed(1)+' MB':Math.max(1,Math.round(b/1024))+' KB';
 const resCard=()=>X.cur?`<div class="bx"><h3>Hazır</h3><div style="word-break:break-all;font-weight:600">${esc(X.cur.name)}</div><div class="mu">${sz(X.cur.blob.size)}</div><div class="acts"><button class="bt" data-a="exShare">Paylaş</button><button class="bt s" data-a="exSave">Cihaza kaydet</button><button class="bt s" data-a="exOpen2">Aç</button><button class="bt s" data-a="exDU">Alternatif indir</button></div><div class="mu" style="margin-top:6px">Paylaş’a dokununca WhatsApp, Drive, e-posta gibi uygulamaları seçebilirsiniz.</div></div>`:'';
 function exPanel(k){if(k)X.k=k;CP=null;open(`<div class="hd"><div><h2>Dışa aktar</h2><div class="mu">İnternet gerekmez. Dosyayı paylaş menüsüyle WhatsApp’a gönderebilir ya da cihaza kaydedebilirsiniz.</div></div><button class="ib" data-a="x" aria-label="Kapat">${I('x')}</button></div>
@@ -613,7 +575,7 @@ window.XP={cur:()=>X.cur,txt:exText,form:pnForm,add:pnAdd,del:pnDel,find:mk_,ope
 
 /* ---- SESLİ ASİSTAN: yerel Türkçe niyet motoru + TTS + kesintisiz dinleme + kendini onarma ---- */
 (()=>{
-const SS=window.speechSynthesis,SR=null,low=s=>String(s).toLocaleLowerCase('tr');
+const SS=window.speechSynthesis,SR=VOK()&&(window.SpeechRecognition||window.webkitSpeechRecognition),low=s=>String(s).toLocaleLowerCase('tr');
 const nt=s=>nz(mathSym(s)).replace(/(\d),(\d)/g,'$1.$2').replace(/[^a-z0-9. ]+/g,' ').replace(/(?<!\d)\.|\.(?!\d)/g,' ').replace(/\s+/g,' ').trim();
 const A={on:0,sp:0,rec:null,pend:null,G:null,last:null,log:[],bo:250,sid:0,miss:0,q:Promise.resolve(),seen:'',seenT:0,int:'',smp:null,off:0,act:0,wl:null};
 if(U.vs===undefined)U.vs=1;if(!U.vr)U.vr=1;U.vo=U.vo||'';
@@ -621,37 +583,11 @@ const sty=document.createElement('style');sty.textContent='.ap{position:fixed;le
 ic.wave='<path d="M3 12h1M7 8v8M12 4v16M17 8v8M21 12h-1"/>';
 const hb=document.createElement('button');hb.className='ib';hb.id='as';hb.dataset.a='ai';hb.setAttribute('aria-label','Demirbaş sesli asistan');hb.innerHTML=I('wave');$('#qa').after(hb);
 const ap=document.createElement('button');ap.className='ap';ap.hidden=true;ap.dataset.a='ai';ap.setAttribute('aria-live','polite');document.body.appendChild(ap);
-/* ---- ses çıkışı (TTS) - PWA sağlamlaştırılmış ---- */
+/* ---- ses çıkışı (TTS) ---- */
 let VL=[];const vsc=v=>(navigator.onLine?(/neural|natural|online|premium|enhanced/i.test(v.name)?3:0)+(v.localService?0:.5):(v.localService?5:-5))+(/google/i.test(v.name)?1:0);
-let voiceLoadAttempts=0;
-function lv(){if(!SS)return;const a=SS.getVoices(),tr=a.filter(v=>/^tr/i.test(v.lang)||/turk/i.test(v.name));VL=(tr.length?tr:a).slice().sort((x,y)=>vsc(y)-vsc(x));VL.tr=tr.length;if(VL.length)voiceLoadAttempts=0}
-const cur=()=>VL.find(v=>v.voiceURI==U.vo)||VL[0];
-// Sesleri yükle: voiceschanged + polling (Android Chrome için)
-lv();
-if(SS){
-  SS.onvoiceschanged=()=>{lv();const s=$('#avo');if(s)s.innerHTML=vopts()};
-  // Sesler hemen yüklenmezse 500ms aralıkla 10 kez dene
-  if(!VL.length){
-    const poll=setInterval(()=>{
-      lv();
-      voiceLoadAttempts++;
-      if(VL.length||voiceLoadAttempts>=10){
-        clearInterval(poll);
-        const s=$('#avo');if(s)s.innerHTML=vopts();
-      }
-    },500);
-  }
-}
-const vopts=()=>{
-  if(!VL.length)return'<option>Cihaz varsayılan sesi</option>';
-  return VL.map(v=>`<option value="${esc(v.voiceURI)}"${cur()==v?' selected':''}>${esc(v.name)} (${esc(v.lang)})</option>`).join('');
-};
-// İlk konuşmadan önce ses kilidini aç (Android Chrome)
-if(SS){
-  const unlock=()=>{try{SS.cancel();const u=new SpeechSynthesisUtterance('');u.volume=0;SS.speak(u)}catch(e){}document.removeEventListener('click',unlock);document.removeEventListener('touchstart',unlock)};
-  document.addEventListener('click',unlock,{once:true});
-  document.addEventListener('touchstart',unlock,{once:true});
-}
+function lv(){if(!SS)return;const a=SS.getVoices(),tr=a.filter(v=>/^tr/i.test(v.lang)||/turk/i.test(v.name));VL=(tr.length?tr:a).slice().sort((x,y)=>vsc(y)-vsc(x));VL.tr=tr.length}
+const cur=()=>VL.find(v=>v.voiceURI==U.vo)||VL[0];lv();if(SS)SS.onvoiceschanged=()=>{lv();const s=$('#avo');if(s)s.innerHTML=vopts()};
+const vopts=()=>VL.map(v=>`<option value="${esc(v.voiceURI)}"${cur()==v?' selected':''}>${esc(v.name)} (${esc(v.lang)})</option>`).join('')||'<option>Ses bulunamadı</option>';
 /* ===== v6 ses motoru: Türkçe okuma + gelişmiş hesap ===== */
 /* ---- konuşma için ayrı metin: D(ekranMetni, sesMetni) ---- */
 const DS=(a,b)=>'\u0001'+a+'\u0002'+b+'\u0003';
@@ -710,28 +646,18 @@ function say(t){const T0=t;log('a',dsp(t));A.lastS=T0;t=tts(spk(t));if(!U.vs||!S
 return new Promise(res=>{let fd=0,wd;const fin=()=>{if(fd)return;fd=1;clearTimeout(wd);if(my==A.sid){A.sp=0;setSt();if(A.on)setTimeout(listen,200)}res()};
 try{SS.cancel()}catch(e){}wd=setTimeout(fin,4000+String(t).length*120/U.vr);
 const parts=String(t).split(/(?<=[.!?])\s+/).flatMap(s=>s.length<200?[s]:s.match(/.{1,180}(\s|$)/g)).filter(Boolean);
-setTimeout(()=>{if(my!=A.sid)return fin();try{parts.forEach((x,i)=>{const u=new SpeechSynthesisUtterance(x);u.lang='tr-TR';const v=cur();if(v){u.voice=v;u.lang=v.lang}u.rate=+U.vr||1;u.volume=+U.vv||1;u.onerror=e=>{console.error('TTS error:',e);fin()};if(i==parts.length-1)u.onend=fin;SS.speak(u)})}catch(e){console.error('TTS exception:',e);fin()}},40)})}
-/* ---- ses girişi (SpeechRecognition) - PWA sağlamlaştırılmış ---- */
+setTimeout(()=>{if(my!=A.sid)return fin();try{parts.forEach((x,i)=>{const u=new SpeechSynthesisUtterance(x),v=cur();u.lang='tr-TR';if(v){u.voice=v;u.lang=v.lang}u.rate=+U.vr||1;u.volume=+U.vv||1;u.onerror=e=>{if(/network|synthesis|voice/.test(e.error||'')){const l=VL.find(v=>v.localService);if(l&&l.voiceURI!=U.vo){U.vo=l.voiceURI;su()}}fin()};if(i==parts.length-1)u.onend=fin;SS.speak(u)})}catch(e){fin()}},40)})}
+/* ---- ses girişi (sürekli dinleme, otomatik yeniden başlatma) ---- */
 function stopRec(){const r=A.rec;A.rec=null;if(r)try{r.abort()}catch(e){}}
 function fail(m){A.on=0;stopRec();setSt();log('a',m);toast(m,'e')}
-let recFailCount=0;
-function listen(){if(!A.on||A.sp||A.rec||document.hidden||!SR)return;
-const r=new SR();r.lang='tr-TR';if(A.loc)r.processLocally=true;r.continuous=true;r.interimResults=true;r.maxAlternatives=1;A.recT=A.act=Date.now();A.rec=r;
-r.onstart=()=>{recFailCount=0};
+function listen(){if(!A.on||A.sp||A.rec||document.hidden||!SR)return;const r=new SR;r.lang='tr-TR';if(A.loc)r.processLocally=true;r.continuous=true;r.interimResults=true;r.maxAlternatives=1;A.recT=A.act=Date.now();
 r.onresult=e=>{if(A.rec!==r)return;A.act=Date.now();let it='';for(let i=e.resultIndex;i<e.results.length;i++){const R=e.results[i];if(R.isFinal){const x=R[0].transcript.trim(),n=Date.now();if(x&&(x!=A.seen||n-A.seenT>1500)){A.seen=x;A.seenT=n;enq(()=>run(x,R[0].confidence))}}else it+=R[0].transcript}A.int=it;setSt()};
-r.onerror=e=>{console.error('STT error:',e);recFailCount++;
-if(e.error=='not-allowed'||e.error=='service-not-allowed')fail('Mikrofon izni yok. Tarayıcı ayarlarından mikrofona izin verin.');
-else if(e.error=='audio-capture')fail('Mikrofon bulunamadı veya başka uygulama kullanıyor.');
-else if(e.error=='network')toast('İnternet bağlantısı gerekli','e');
-else if(e.error=='no-speech'){}// Sessiz, hata değil
-else if(e.error=='aborted'){}// İptal edildi
-else if(recFailCount>=5){fail('Ses tanıma 5 kez başarısız oldu. Asistan kapatıldı.');return}
-A.bo=Math.min(A.bo*1.5,8000)};
-r.onend=()=>{if(A.rec===r)A.rec=null;A.int='';setSt();if(recFailCount<5){A.bo=Date.now()-A.recT>4000?300:Math.min(A.bo*1.5,6000)}if(A.on&&!A.sp&&recFailCount<5)setTimeout(listen,A.bo)};
-try{r.start();setSt()}catch(e){console.error('STT start error:',e);A.rec=null;A.bo=Math.min(A.bo*2,8000);if(A.on&&!A.sp)setTimeout(listen,A.bo)}}
+r.onerror=e=>{try{localStorage.removeItem(VF)}catch(_){}if(e.error=='not-allowed'||e.error=='service-not-allowed')fail('Mikrofon izni yok. Tarayıcı veya uygulama ayarlarından mikrofona izin verin. Şimdilik komutu yazabilirsiniz.');else if(e.error=='audio-capture')fail('Mikrofon bulunamadı.');else if(e.error=='language-not-supported')A.loc=0;else if(e.error=='network')A.bo=Math.min(A.bo*2,6000)};
+r.onend=()=>{try{localStorage.removeItem(VF)}catch(_){}if(A.rec===r)A.rec=null;A.int='';setSt();A.bo=Date.now()-A.recT>4000?250:Math.min(A.bo*2,5000);if(A.on&&!A.sp)setTimeout(listen,A.bo)};
+A.rec=r;try{try{localStorage.setItem(VF,'1')}catch(_){}r.onstart=()=>{try{localStorage.removeItem(VF)}catch(_){}};r.start();setSt()}catch(e){A.rec=null;try{localStorage.removeItem(VF)}catch(_){}}}
 const enq=f=>{A.q=A.q.then(f).catch(e=>{try{heal(e)}catch(_){}})};
 async function wake(){try{if(navigator.wakeLock&&A.on&&!document.hidden)A.wl=await navigator.wakeLock.request('screen')}catch(e){}}
-function start(){if(!SR){log('a','Ses tanıma bu tarayıcıda desteklenmiyor.');return}A.on=1;A.bo=300;recFailCount=0;wake();setSt();locChk();say('Dinliyorum.')}
+function start(){if(!SR){log('a','Bu tarayıcı sesle dinlemeyi desteklemiyor. Komutu yazabilirsiniz; yanıtlar sesli gelir.');return}A.on=1;A.bo=250;wake();setSt();locChk();if(!navigator.onLine)log('a','İnternet yok. Cihaz üstü Türkçe tanıma varsa kullanılır; yoksa komutu yazabilirsiniz.');say('Dinliyorum.')}
 async function locChk(){A.loc=0;A.locT='Tanıma: tarayıcının ses servisi (internet gerekir)';try{if(SR&&SR.available){const o={langs:['tr-TR'],processLocally:true},s=await SR.available(o);if(s=='available'){A.loc=1;A.locT='Tanıma: cihaz üzerinde, çevrimdışı çalışır'}else if((s=='downloadable'||s=='downloading')&&SR.install){A.locT='Çevrimdışı Türkçe tanıma paketi indiriliyor; bitince otomatik kullanılır';SR.install(o).then(()=>{A.loc=1;A.locT='Tanıma: cihaz üzerinde, çevrimdışı çalışır'}).catch(()=>{})}}}catch(e){}}
 function stop(){A.on=0;A.sid++;A.sp=0;A.pend=null;A.G=null;stopRec();try{SS&&SS.cancel()}catch(e){}try{A.wl&&A.wl.release()}catch(e){}setSt();log('a','Dinleme durdu.')}
 setInterval(()=>{if(!A.on)return;if(A.sp&&SS&&!SS.speaking&&!SS.pending&&Date.now()-A.spT>2500){A.sp=0}if(A.rec&&Date.now()-A.act>60000)stopRec();if(A.rt&&Date.now()-A.rt>25000){A.rt=0;A.q=Promise.resolve();A.sp=0;A.pend=null}if(!A.sp&&!A.rec)listen();setSt()},2500);
@@ -1160,11 +1086,11 @@ return q==1?`${e[1]}: yüz gramında yaklaşık ${e[2]} kalori.`:q==2?`${e[1]}: 
 async function brain(raw){let t=nt(raw);if(!t)return'';t=t.replace(/^(hey |hadi |sayin )?(demirbas|asistan)\w*\s*/,'');if(!t)return'Buyur, dinliyorum.';let r=pending(t);if(r!==undefined)return r;if(A.G){r=gIn(t);if(r!==undefined)return r}
 {const mr=mathGo(t);if(mr)return mr}
 {const rr=rich(t)||know(t);if(rr)return rr}const ss=split(t);if(ss.length>1){const o=[];for(const s of ss){const x=await parse(s,raw);if(x)o.push(x);if(A.pend)break}return o.join(' ')}return parse(t,raw)}
-function run(raw,cf,typed){raw=String(raw||'').trim();if(!raw)return;const t0=nt(raw);if(U.ww&&!typed&&!A.pend&&!A.G&&!/^(hey |hadi |sayin )?(demirbas|asistan)/.test(t0)&&Date.now()-(A.lt||0)>15000)return;A.lt=A.rt=Date.now();log('u',raw);let r;
-if(!typed&&cf>0&&cf<.5&&!A.pend&&nums(t0.split(' ')).some(x=>typeof x=='object')){A.pend={k:'y',fn:()=>brain(raw)};say(`“${raw}” mı dedin?`);A.rt=0;return}
-A.mh=0;try{r=brain(raw)}catch(e){heal(e);r='Bir aksilik oldu, otomatik düzelttim. Tekrar söyler misin?'}if(!A.mh)A.crT=0;
+async function run(raw,cf,typed){raw=String(raw||'').trim();if(!raw)return;const t0=nt(raw);if(U.ww&&!typed&&!A.pend&&!A.G&&!/^(hey |hadi |sayin )?(demirbas|asistan)/.test(t0)&&Date.now()-(A.lt||0)>15000)return;A.lt=A.rt=Date.now();log('u',raw);let r;
+if(!typed&&cf>0&&cf<.5&&!A.pend&&nums(t0.split(' ')).some(x=>typeof x=='object')){A.pend={k:'y',fn:()=>brain(raw)};await say(`“${raw}” mı dedin?`);A.rt=0;return}
+A.mh=0;try{r=await brain(raw)}catch(e){heal(e);r='Bir aksilik oldu, otomatik düzelttim. Tekrar söyler misin?'}if(!A.mh)A.crT=0;
 if(r===undefined){if(nt(raw).split(' ').length<2)return;const sg=sug(nt(raw));if(sg){A.pend={k:'y',fn:()=>brain(sg)};r=`Şunu mu demek istedin: “${sg}”?`}else{A.miss++;r=A.miss%3==1?'Anlayamadım. '+({urun:'Bir ürünü aramak için “domates ara” de.',sayim:'Sayım için “domates on iki koli” ya da “sayıma başla” de.',sevk:'Palete eklemek için “patates iki koli” de.'})[U.tab]+' Tüm komutlar için “neler yapabilirsin” de.':'Tekrar söyler misin?'}}else A.miss=0;
-if(r)say(r);A.lt=Date.now();A.rt=0;if(A.off){A.off=0;stop()}}
+if(r)await say(r);A.lt=Date.now();A.rt=0;if(A.off){A.off=0;stop()}}
 /* ---- panel ---- */
 function panel(){CP=null;lv();open(`<div class="hd"><div><h2>Demirbaş</h2><div class="mu" id="ast">${esc(stT())}</div></div><button class="ib" data-a="x" aria-label="Kapat">${I('x')}</button></div><button class="bt${A.on?' o':''}" id="aiT" data-a="aiT" style="width:100%;height:52px">${A.on?'Dinlemeyi durdur':'Konuşmaya başla'}</button><div class="mu" style="margin-top:8px">${esc(A.locT||'Çevrimdışı çalışır; ses tanıma için önce başlatın.')}</div>${SR?'':'<div class="mu" style="margin-top:8px">Uygulama içinde mikrofonla dinleme kapalı (çökme koruması). Komut kutusuna yazın ya da klavyedeki mikrofon tuşuyla konuşun; yanıtlar sesli gelir.</div><button class="cp" style="margin-top:8px" data-a="aiTry">Mikrofonu yine de dene</button><div>'}
 <div class="bx" id="alog" role="log" aria-live="polite" style="max-height:190px;overflow:auto">${lh()}</div>
@@ -1241,7 +1167,7 @@ const _eb=exBuild;exBuild=async function(k,f){if(f!='pdf'||k=='mv'||k=='ord'||(k
 function dl(c,du){const go=u=>{const a=D.createElement('a');a.href=u;a.download=c.name;a.rel='noopener';D.body.appendChild(a);a.click();a.remove()};
 if(du){const r=new FileReader;r.onload=()=>{go(r.result);toast('Alternatif indirme başlatıldı')};r.readAsDataURL(c.blob);return}
 const u=URL.createObjectURL(c.blob);go(u);setTimeout(()=>URL.revokeObjectURL(u),120000);toast('İndirme başlatıldı. İnmediyse Paylaş, Aç veya Alternatif indir’i deneyin')}
-exSave=async function(){const c=X.cur;if(!c)return;dl(c,0)};
+exSave=async function(){const c=X.cur;if(!c)return;try{const d=window.claude&&claude.use?await claude.use('downloads'):null;if(d){await d.save({filename:c.name,data:c.blob});toast('Kaydetme isteği gönderildi');return}}catch(e){if(e&&e.code=='declined')return}dl(c,0)};
 /* -- ürün içe aktarma: CSV, TXT, JSON, XLSX -- */
 function csvRows(t){t=t.replace(/^\uFEFF/,'');const f=t.split('\n')[0],d=[';','\t',','].map(x=>[x,f.split(x).length]).sort((a,b)=>b[1]-a[1])[0][0],R=[];let r=[],c='',q=0;for(let i=0;i<t.length;i++){const ch=t[i];if(q){if(ch=='"'){if(t[i+1]=='"'){c+='"';i++}else q=0}else c+=ch}else if(ch=='"')q=1;else if(ch==d){r.push(c);c=''}else if(ch=='\n'||ch=='\r'){if(ch=='\r'&&t[i+1]=='\n')i++;r.push(c);c='';if(r.some(x=>x.trim()))R.push(r);r=[]}else c+=ch}r.push(c);if(r.some(x=>x.trim()))R.push(r);return R}
 async function unzip(buf){const u=new Uint8Array(buf),dv=new DataView(buf),td=new TextDecoder();let e=u.length-22;while(e>=0&&dv.getUint32(e,true)!=0x06054b50)e--;const n=dv.getUint16(e+10,true);let p=dv.getUint32(e+16,true);const o={};
@@ -1324,17 +1250,8 @@ else if(k=='put'){const v=calcEv(cx);if(v===null||!cl||!cl.isConnected)return to
 else cx+=k;calcShow()});
 document.addEventListener('focusin',e=>{const t=e.target;if(t.matches&&t.matches('input[type=number],input[inputmode=decimal],input[inputmode=numeric]')&&!CC.contains(t))cl=t});
 const _dr5=draw;draw=function(r){_dr5(r);cb.hidden=U.tab=='urun'};cb.hidden=U.tab=='urun';
-// VCR kontrolü kaldırıldı (PWA'da gerek yok)
+if(VCR)setTimeout(()=>toast('Sesle dinleme çöktüğü için kapatıldı. Komutu yazabilirsiniz','e'),900);
 
 if(healed)setTimeout(()=>toast('Kayıtlı veri onarıldı','e'),400);look();save();draw();
 (()=>{let t=0;addEventListener('devicemotion',e=>{const a=e.accelerationIncludingGravity;if(!a)return;const m=Math.hypot(a.x||0,a.y||0,a.z||0);if(m>32&&Date.now()-t>1500){t=Date.now();const b=document.getElementById('as');b&&b.click()}})})();
-/* ---- Service Worker kaydı ---- */
-if('serviceWorker' in navigator){
-navigator.serviceWorker.register('./sw.js').then(reg=>{
-console.log('[PWA] Service Worker kayıtlı',reg.scope);
-reg.addEventListener('updatefound',()=>{const newWorker=reg.installing;newWorker.addEventListener('statechange',()=>{if(newWorker.state==='installed'&&navigator.serviceWorker.controller){toast('Yeni sürüm hazır. Sayfayı yenileyin.');}})});
-}).catch(e=>console.error('[PWA] SW kayıt hatası:',e));
-let refreshing=false;
-navigator.serviceWorker.addEventListener('controllerchange',()=>{if(!refreshing){refreshing=true;window.location.reload()}});
-}
 </script></body></html>
