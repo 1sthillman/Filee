@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manav PWA Icon Generator</title>
+    <style>
+        body { font-family: system-ui; padding: 20px; }
+        canvas { border: 1px solid #ccc; margin: 10px; }
+        button { padding: 10px 20px; font-size: 16px; margin: 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Manav PWA Icon Generator</h1>
+    <p>Tıklayınca indirme başlar:</p>
+    <button onclick="generate(192)">192x192 indir</button>
+    <button onclick="generate(512)">512x512 indir</button>
+    <button onclick="generateMaskable()">512x512 Maskable indir</button>
+    <br>
+    <canvas id="canvas"></canvas>
+    
+    <script>
+        function drawIcon(ctx, size, maskable = false) {
+            const scale = size / 512;
+            const padding = maskable ? size * 0.1 : 0;  // Maskable için %10 padding
+            const offset = padding / 2;
+            
+            ctx.scale(scale, scale);
+            ctx.translate(offset / scale, offset / scale);
+            
+            const drawSize = maskable ? 512 * 0.8 : 512;
+            const centerOffset = maskable ? (512 - drawSize) / 2 : 0;
+            
+            ctx.translate(centerOffset, centerOffset);
+            ctx.scale(drawSize / 512, drawSize / 512);
+            
+            // Background circle
+            ctx.fillStyle = '#1D6B44';
+            ctx.beginPath();
+            ctx.arc(256, 256, 240, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Tomato
+            ctx.fillStyle = '#E63946';
+            ctx.beginPath();
+            ctx.ellipse(230, 190, 50, 55, 0, 0, Math.PI * 2);
+            ctx.fill();
+            
+            ctx.fillStyle = 'rgba(255, 107, 119, 0.5)';
+            ctx.beginPath();
+            ctx.ellipse(220, 180, 15, 20, -0.3, 0, Math.PI * 2);
+            ctx.fill();
+            
+            ctx.fillStyle = '#2D5016';
+            ctx.fillRect(252, 140, 8, 25);
+            
+            ctx.fillStyle = '#4A7C2C';
+            ctx.beginPath();
+            ctx.ellipse(240, 150, 15, 8, -0.5, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.beginPath();
+            ctx.ellipse(270, 150, 15, 8, 0.5, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Pepper
+            ctx.fillStyle = '#6BBF59';
+            ctx.beginPath();
+            ctx.ellipse(340, 220, 30, 45, 0, 0, Math.PI * 2);
+            ctx.fill();
+            
+            ctx.fillStyle = 'rgba(143, 212, 126, 0.4)';
+            ctx.beginPath();
+            ctx.ellipse(335, 210, 10, 15, 0, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Carrot
+            ctx.fillStyle = '#FF8C42';
+            ctx.beginPath();
+            ctx.moveTo(140, 220);
+            ctx.lineTo(160, 300);
+            ctx.quadraticCurveTo(165, 315, 180, 320);
+            ctx.quadraticCurveTo(195, 315, 200, 300);
+            ctx.lineTo(220, 220);
+            ctx.closePath();
+            ctx.fill();
+            
+            ctx.strokeStyle = '#E07A2F';
+            ctx.lineWidth = 4;
+            ctx.beginPath();
+            ctx.moveTo(155, 240);
+            ctx.lineTo(165, 300);
+            ctx.moveTo(180, 235);
+            ctx.lineTo(185, 305);
+            ctx.moveTo(205, 240);
+            ctx.lineTo(195, 300);
+            ctx.stroke();
+            
+            ctx.fillStyle = '#4A7C2C';
+            ctx.beginPath();
+            ctx.moveTo(155, 215);
+            ctx.lineTo(150, 190);
+            ctx.lineTo(165, 210);
+            ctx.fill();
+            ctx.beginPath();
+            ctx.moveTo(180, 210);
+            ctx.lineTo(180, 185);
+            ctx.lineTo(190, 208);
+            ctx.fill();
+            ctx.beginPath();
+            ctx.moveTo(205, 215);
+            ctx.lineTo(210, 190);
+            ctx.lineTo(195, 210);
+            ctx.fill();
+            
+            // Clipboard
+            ctx.fillStyle = '#F8F9FA';
+            ctx.fillRect(145, 310, 230, 160);
+            ctx.strokeStyle = '#DEE2E6';
+            ctx.lineWidth = 2;
+            ctx.strokeRect(145, 310, 230, 160);
+            
+            ctx.fillStyle = '#6C757D';
+            ctx.fillRect(225, 300, 70, 25);
+            ctx.fillRect(230, 305, 60, 15);
+            
+            // Checklist
+            ctx.strokeStyle = '#1D6B44';
+            ctx.lineWidth = 6;
+            ctx.lineCap = 'round';
+            
+            ctx.beginPath();
+            ctx.moveTo(180, 350);
+            ctx.lineTo(340, 350);
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.moveTo(180, 390);
+            ctx.lineTo(340, 390);
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.moveTo(180, 430);
+            ctx.lineTo(310, 430);
+            ctx.stroke();
+            
+            ctx.lineWidth = 8;
+            ctx.lineJoin = 'round';
+            
+            ctx.beginPath();
+            ctx.moveTo(165, 350);
+            ctx.lineTo(170, 357);
+            ctx.lineTo(180, 343);
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.moveTo(165, 390);
+            ctx.lineTo(170, 397);
+            ctx.lineTo(180, 383);
+            ctx.stroke();
+            
+            ctx.strokeStyle = '#ADB5BD';
+            ctx.lineWidth = 5;
+            ctx.strokeRect(161, 422, 15, 15);
+        }
+        
+        function generate(size) {
+            const canvas = document.getElementById('canvas');
+            canvas.width = size;
+            canvas.height = size;
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, size, size);
+            
+            drawIcon(ctx, size, false);
+            
+            setTimeout(() => {
+                canvas.toBlob(blob => {
+                    const link = document.createElement('a');
+                    link.download = `icon-${size}.png`;
+                    link.href = URL.createObjectURL(blob);
+                    link.click();
+                });
+            }, 100);
+        }
+        
+        function generateMaskable() {
+            const size = 512;
+            const canvas = document.getElementById('canvas');
+            canvas.width = size;
+            canvas.height = size;
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, size, size);
+            
+            // Maskable için tüm canvas'ı yeşil yap
+            ctx.fillStyle = '#1D6B44';
+            ctx.fillRect(0, 0, size, size);
+            
+            // İkonu ortaya çiz, %80 boyutunda
+            ctx.save();
+            drawIcon(ctx, size, true);
+            ctx.restore();
+            
+            setTimeout(() => {
+                canvas.toBlob(blob => {
+                    const link = document.createElement('a');
+                    link.download = 'icon-512-maskable.png';
+                    link.href = URL.createObjectURL(blob);
+                    link.click();
+                });
+            }, 100);
+        }
+    </script>
+</body>
+</html>
